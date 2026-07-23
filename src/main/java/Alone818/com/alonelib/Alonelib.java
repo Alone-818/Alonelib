@@ -1,6 +1,4 @@
 package Alone818.com.alonelib;
-
-import Alone818.com.alonelib.init.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
@@ -39,9 +37,6 @@ public class Alonelib {
     public Alonelib() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         //region ModEventBus
-        ModBlocks.register(modEventBus);
-        ModItems.register(modEventBus);
-
         //end region
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
