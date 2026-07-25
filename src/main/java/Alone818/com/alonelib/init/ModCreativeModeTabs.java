@@ -26,7 +26,7 @@ public class ModCreativeModeTabs {
 
                             // 设置标签的显示名称。
                             // 使用可本地化文本（语言文件中定义）。
-                            .title(Component.translatable("tab.Alonelib"))
+                            .title(Component.translatable("Alonelib"))
 
                             // 定义该标签中显示的物品内容。
                             // output.accept(...) 用于向标签中添加物品。

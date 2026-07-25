@@ -14,6 +14,8 @@ import Alone818.com.alonelib.Alonelib;
 
 import java.util.function.Consumer;
 import java.util.function.Function;
+import java.util.function.Consumer;
+import java.util.function.Function;
 import java.util.function.Supplier;
 
 public class ModItems {
