@@ -1,16 +1,16 @@
 package Alone818.com.alonelib;
+
 import Alone818.com.alonelib.register.ModBlocks;
+import Alone818.com.alonelib.register.ModCreativeModeTabs;
+import Alone818.com.alonelib.register.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import Alone818.com.alonelib.register.ModCreativeModeTabs;
-import Alone818.com.alonelib.register.ModItems;
 import org.slf4j.Logger;
 
-// The value here should match an entry in the META-INF/mods.toml file
 @Mod(Alonelib.MODID)
 public class Alonelib {
     public static final String MODID = "alonelib";
@@ -18,19 +18,13 @@ public class Alonelib {
 
     public Alonelib() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        //region ModEventBus
-
         ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
-
-        //end region
-        // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
-        // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-     }
+    }
 }
