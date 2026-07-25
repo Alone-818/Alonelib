@@ -1,0 +1,5 @@
+{
+  "entities": ["player"],
+  "slots":["certificate"],
+  "icon": "alonelib:slot/empty_certificate"
+}

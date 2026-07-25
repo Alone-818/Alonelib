@@ -1,5 +1,6 @@
 {
   "item.alonelib.raw_material": "Raw Material",
   "block.alonelib.raw_material_block": "Raw Material Block",
-  "tab.alonelib": "Alonelib"
+  "tab.alonelib": "Alonelib",
+  "curios.identifier.certificate": "Certificate"
 }

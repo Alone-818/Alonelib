@@ -1,0 +1,6 @@
+{
+  "replace": true,
+  "size": 1,
+  "entities": ["player"],
+  "icon": "alonelib:slot/empty_certificate"
+}
