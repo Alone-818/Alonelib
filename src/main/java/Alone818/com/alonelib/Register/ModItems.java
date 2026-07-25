@@ -1,10 +1,6 @@
-package Alone818.com.alonelib.init;
+package Alone818.com.alonelib.Register;
 
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -14,9 +10,6 @@ import Alone818.com.alonelib.Alonelib;
 
 import java.util.function.Consumer;
 import java.util.function.Function;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Supplier;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -25,7 +18,7 @@ public class ModItems {
     // 注册本教程中的第一个示例物品：raw_material。
     // "raw_material" 为物品的注册名（Registry Name），
     // 同时也会作为资源文件与模型文件的命名基础。
-    public static final RegistryObject<Item> RAW_MATERIAL = registerItem("raw_material");
+   public static final RegistryObject<Item> RAW_MATERIAL = registerItem("raw_material");
 
     // 注册一个最基础的物品。
     // 仅需要提供注册名，使用默认 Item.Properties。
@@ -37,8 +30,8 @@ public class ModItems {
     // 注册一个可自定义物品实例的通用方法。
     // factory 接收 Item.Properties 并返回一个 Item，
     // 用于创建自定义 Item 子类或具有特殊构造逻辑的物品。
-    private static RegistryObject<Item> registerItem(String name, Function<Item.Properties, Item> factory) {
-        return ITEMS.register(name, () -> factory.apply(new Item.Properties()));
+    private static RegistryObject<Item> registerItem(String name, Function<Item.Properties, Item> action) {
+        return ITEMS.register(name, () -> action.apply(new Item.Properties()));
     }
 
 
@@ -62,5 +55,4 @@ public class ModItems {
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
-    }
-}
+    }}
