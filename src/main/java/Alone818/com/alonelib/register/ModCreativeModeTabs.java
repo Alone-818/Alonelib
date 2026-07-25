@@ -1,4 +1,4 @@
-package Alone818.com.alonelib.Register;
+package Alone818.com.alonelib.register;
 
 import Alone818.com.alonelib.Alonelib;
 

@@ -1,4 +1,4 @@
-package Alone818.com.alonelib.Register;
+package Alone818.com.alonelib.register;
 
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
